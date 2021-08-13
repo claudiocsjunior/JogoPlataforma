@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class EstadoPersonagem : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class EstadoPersonagem : MonoBehaviour
     public int chavesObtidas = 0;
     public int pontuacao = 0;
     public int totalChaves = 5;
-    public float tempo = 360f;
+    public float tempo = 300f;
     public Text keyText;
     public Text PontuacaoText;
     public Text VidasText;
@@ -50,7 +51,14 @@ public class EstadoPersonagem : MonoBehaviour
 
         float tempoTemp = tempo -= Time.deltaTime;
 
-        TempoText.text = tempoTemp.ToString();
+
+        TimeSpan time = TimeSpan.FromSeconds(tempoTemp);
+
+        //here backslash is must to tell that colon is
+        //not the part of format, it just a character that we want in output
+        string str = time.ToString(@"mm\:ss");
+
+        TempoText.text = str;
 
         if(vidas <= 0 || tempo <= 0){
             SceneManager.LoadScene("Game Over");
