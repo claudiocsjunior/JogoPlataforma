@@ -1,0 +1,16 @@
+{
+    "gameSalvo": true,
+    "vidas": 5,
+    "chavesObtidas": 1,
+    "pontuacao": 50,
+    "totalChaves": 5,
+    "tempo": 283.94317626953127,
+    "posicaoPersonsagem": {
+        "x": -42.51585006713867,
+        "y": 2.1989500522613527,
+        "z": 47.20764923095703
+    },
+    "nomesChavesObtidas": [
+        "key"
+    ]
+}

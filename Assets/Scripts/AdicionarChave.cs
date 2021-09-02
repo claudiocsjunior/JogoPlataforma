@@ -13,6 +13,7 @@ public class AdicionarChave : MonoBehaviour
     void OnTriggerEnter(Collider collider){
         if(collider.tag == "Player"){
             EstadoPersonagem.Instance.chavesObtidas++;
+            EstadoPersonagem.Instance.nomesChavesObtidas.Add(this.transform.parent.gameObject.name);
             Destroy(this.transform.parent.gameObject);
         }
     }
