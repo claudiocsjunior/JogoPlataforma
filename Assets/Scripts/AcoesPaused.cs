@@ -19,6 +19,7 @@ public class AcoesPaused : MonoBehaviour
             totalChaves = EstadoPersonagem.Instance.totalChaves,
             vidas = EstadoPersonagem.Instance.vidas,
             nomesChavesObtidas = EstadoPersonagem.Instance.nomesChavesObtidas,
+            nomesPontuadoresObtidos = EstadoPersonagem.Instance.nomesPontuadoresObtidos,
             gameSalvo = true,
             posicaoPersonsagem = new PosicaoPersonsagem(){
                 x = controller.transform.position.x,

@@ -26,6 +26,8 @@ public class EstadoPersonagem : MonoBehaviour
 
     public List<string> nomesChavesObtidas = new List<string>();
 
+    public List<string> nomesPontuadoresObtidos = new List<string>();
+
     private SaveEstadoGame saveEstadoGame = new SaveEstadoGame();
 
     public GameObject portaSaida;
@@ -125,11 +127,19 @@ public class EstadoPersonagem : MonoBehaviour
         controller.enabled = true;
 
         inativarChaves();
+        inativarPontuadores();
     }
 
     void inativarChaves(){
         foreach(string chave in nomesChavesObtidas){
             GameObject chaveObject = GameObject.Find(chave);
+            chaveObject.SetActive(false);
+        }
+    }
+
+    void inativarPontuadores(){
+        foreach(string pontuador in nomesPontuadoresObtidos){
+            GameObject chaveObject = GameObject.Find(pontuador);
             chaveObject.SetActive(false);
         }
     }

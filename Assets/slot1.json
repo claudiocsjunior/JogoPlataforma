@@ -1,16 +1,28 @@
 {
     "gameSalvo": true,
     "vidas": 5,
-    "chavesObtidas": 1,
-    "pontuacao": 50,
+    "chavesObtidas": 3,
+    "pontuacao": 325,
     "totalChaves": 5,
-    "tempo": 283.94317626953127,
+    "tempo": 221.52536010742188,
     "posicaoPersonsagem": {
-        "x": -42.51585006713867,
-        "y": 2.1989500522613527,
-        "z": 47.20764923095703
+        "x": 41.38352966308594,
+        "y": 1.0299999713897706,
+        "z": 31.95966148376465
     },
     "nomesChavesObtidas": [
-        "key"
-    ]
+        "key",
+        "coinBronze",
+        "coinBronze (2)",
+        "key (1)",
+        "coinBronze (3)",
+        "coinSilver",
+        "coinBronze (4)",
+        "coinSilver (1)",
+        "coinBronze (6)",
+        "key (4)",
+        "coinGold (1)",
+        "coinBronze (5)"
+    ],
+    "nomesPontuadoresObtidos": []
 }

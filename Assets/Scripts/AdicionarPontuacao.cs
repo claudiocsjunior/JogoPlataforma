@@ -19,6 +19,7 @@ public class AdicionarPontuacao : MonoBehaviour
 
     void OnTriggerEnter(Collider collider){
         if(collider.tag == "Player"){
+            EstadoPersonagem.Instance.nomesChavesObtidas.Add(this.transform.parent.gameObject.name);
             EstadoPersonagem.Instance.pontuacao += pontuacaoAtribuir;
             Destroy(this.transform.parent.gameObject);
         }

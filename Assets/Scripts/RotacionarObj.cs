@@ -13,6 +13,8 @@ public class RotacionarObj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(x: 0, y: 0.4f, z:0));
+        if(!EstadoPersonagem.Instance.pausado){
+            transform.Rotate(new Vector3(x: 0, y: 0.4f, z:0));
+        }
     }
 }

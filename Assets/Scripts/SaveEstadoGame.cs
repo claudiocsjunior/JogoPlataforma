@@ -14,6 +14,7 @@ public class SaveEstadoGame : SaveGame
     public float tempo;
     public PosicaoPersonsagem posicaoPersonsagem;
     public List<string> nomesChavesObtidas = new List<string>();
+    public List<string> nomesPontuadoresObtidos = new List<string>();
 
     public void saveGame(){
         base.save();
