@@ -29,6 +29,7 @@ public class AcoesPaused : MonoBehaviour
         };
 
         saveEstadoGame.saveGame();
+        EstadoPersonagem.Instance.mensagemsaveText.text = "Jogo Salvo";
     }
 
 

@@ -30,6 +30,8 @@ public class EstadoPersonagem : MonoBehaviour
 
     private SaveEstadoGame saveEstadoGame = new SaveEstadoGame();
 
+    public Text mensagemsaveText;
+
     public GameObject portaSaida;
 
     //public float tempo 
@@ -53,7 +55,7 @@ public class EstadoPersonagem : MonoBehaviour
         if(carregarJogo){
             executarCarregamentoJogo();
         }else{
-            saveEstadoGame.limparSlot();
+            limparGameSaved();
         }
     }
 
@@ -96,12 +98,14 @@ public class EstadoPersonagem : MonoBehaviour
             pausado = false;
             Time.timeScale = 1f;
             PausePainel.SetActive(false);
+            mensagemsaveText.text = "";
             //Cursor.lockState = CursorLockMode.Locked;
             //Cursor.visible = false;
         }else{
             pausado = true;
             Time.timeScale = 0f;
             PausePainel.SetActive(true);
+            mensagemsaveText.text = "";
             //Cursor.lockState = CursorLockMode.None;
             //Cursor.visible = true;
         }
@@ -142,5 +146,9 @@ public class EstadoPersonagem : MonoBehaviour
             GameObject chaveObject = GameObject.Find(pontuador);
             chaveObject.SetActive(false);
         }
+    }
+
+    public void limparGameSaved(){
+        saveEstadoGame.limparSlot();
     }
 }

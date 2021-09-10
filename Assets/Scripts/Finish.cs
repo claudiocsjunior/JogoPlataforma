@@ -23,6 +23,7 @@ public class Finish : MonoBehaviour
             if(EstadoPersonagem.Instance.chavesObtidas == EstadoPersonagem.Instance.totalChaves){
                 PlayerPrefs.SetString("Pontuacao", EstadoPersonagem.Instance.pontuacao.ToString());
                 SceneManager.LoadScene("Congratulations");
+                EstadoPersonagem.Instance.limparGameSaved();
             }
         }
     }
